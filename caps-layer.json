@@ -405,6 +405,37 @@
             "to": [{ "key_code": "mute" }],
             "type": "basic",
             "description": "Mute sound"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "caps_layer",
+                    "type": "variable_if",
+                    "value": 1
+                },
+                {
+                    "identifiers": [
+                        {
+                            "is_keyboard": true,
+                            "product_id": 25361,
+                            "vendor_id": 12851
+                        },
+                        {
+                            "is_keyboard": true,
+                            "product_id": 21265,
+                            "vendor_id": 12851
+                        }
+                    ],
+                    "type": "device_if"
+                }
+            ],
+            "from": {
+                "key_code": "delete_or_backspace",
+                "modifiers": { "optional": ["any"] }
+            },
+            "to": [{ "key_code": "delete_forward" }],
+            "type": "basic",
+            "description": "Delete key"
         }
     ]
 }
